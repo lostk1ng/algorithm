@@ -26,13 +26,13 @@ public class MaxSum {
 	 * @return
 	 */
 	public static int maxSum2(int[] list) {
-		int maxSum = 0;
+		int maxSum = -10000; //需要定义全是负数时返回什么-INF/0
 		int tempSum = 0;
 		for (int i = 0; i < list.length; i++) {
 			tempSum += list[i];
 			if(tempSum > maxSum)
 				maxSum = tempSum;
-			else if(tempSum <= 0)
+			if(tempSum <= 0)
 				tempSum = 0;
 		}
 		return maxSum;
@@ -88,7 +88,7 @@ public class MaxSum {
 	}
 	
 	public static void main(String[] args) {
-		int[] list = new int[]{-6, 2, 4, -7, 5, 3, 2, -1, 6, -9, 10, -2};
+		int[] list = new int[]{-9,-2,-3,-1,-4};
 		System.out.println(MaxSum.maxSum(list));
 		System.out.println(MaxSum.maxSum2(list));
 		System.out.println(MaxSum.maxSumRec(list, 0, list.length-1));
