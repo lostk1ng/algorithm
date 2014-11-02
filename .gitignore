@@ -1,0 +1,14 @@
+# maven
+
+target/
+
+
+# eclipse ignore
+
+.settings/
+
+.project
+
+.classpath
+
+bin/
