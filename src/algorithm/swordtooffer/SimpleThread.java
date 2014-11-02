@@ -1,3 +1,5 @@
+package algorithm.swordtooffer;
+
 
 public class SimpleThread extends Thread {
 	private int value;
